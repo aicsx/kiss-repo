@@ -1,8 +1,6 @@
 #!/bin/sh -e
 
 
-cd numlockx
-
 ./configure --prefix=/usr 
 
 make
