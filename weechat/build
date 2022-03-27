@@ -1,0 +1,18 @@
+#!/bin/sh -e
+
+export DESTDIR="$1"
+
+cmake -B build \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DENABLE_PHP=OFF \
+    -DENABLE_RUBY=OFF \
+    -DENABLE_LUA=OFF \
+    -DENABLE_GUILE=OFF \
+    -DENABLE_SPELL=OFF \
+    -DENABLE_MAN=OFF \
+    -DENABLE_NLS=OFF \
+    -Wno-dev
+    
+cmake --build build
+cmake --install build

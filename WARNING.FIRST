@@ -1,0 +1,6 @@
+Warning:
+
+- whois package depends on gettext (gettext-tiny)
+- gettext on musl breaks the system right now. I am thinking of a solution. Suggestions welcome.
+ 
+Don't install whois package if you are not sure that what you are doing.
