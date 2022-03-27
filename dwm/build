@@ -1,0 +1,16 @@
+#!/bin/sh -e
+
+# install path to '/usr'.
+sed 's|/usr/local|/usr|g' \
+    config.mk > _
+mv -f _ config.mk
+
+# apply patch (alpha+autostart)
+patch -p1 < dwm-alpha-20201019-61bb8b2.diff
+patch -p1 < dwm-autostart-20210120-cb3f58a.diff
+
+# set my personal dotfile
+cp config.h ../
+
+make
+make install

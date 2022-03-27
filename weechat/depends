@@ -1,0 +1,13 @@
+cmake make
+curl
+gnutls
+libgcrypt
+libgpg-error
+libtool
+ncurses
+perl
+python
+pkgconf make
+tcl
+tk
+zlib

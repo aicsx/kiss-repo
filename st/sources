@@ -1,0 +1,3 @@
+https://dl.suckless.org/PACKAGE/PACKAGE-VERSION.tar.gz
+patches/st-alpha-20220206-0.8.5.diff
+patches/st-scrollback-20210507-4536f46.diff

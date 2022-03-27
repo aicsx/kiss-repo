@@ -1,7 +1,8 @@
 json-c
 libcap
-libressl
+libnghttp2
 libuv
 libxml2
+openssl
 xz
 zlib

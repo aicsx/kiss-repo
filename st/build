@@ -1,0 +1,16 @@
+#!/bin/sh -e
+
+# apply my patches
+patch -p1 < st-alpha-20220206-0.8.5.diff
+patch -p1 < st-scrollback-20210507-4536f46.diff # my histsize set to 10000
+
+# change font and size
+sed 's|Liberation Mono:pixelsize=12|monospace:pixelsize=12|g' config.def.h > _
+mv -f _ config.def.h
+
+# Install terminfo to right location.
+export TERMINFO="$1/usr/share/terminfo"
+mkdir -p "$TERMINFO"
+
+make
+make PREFIX=/usr DESTDIR="$1" install

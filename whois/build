@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+# fix for build error - he required double make for japan module 
+# My choice: simply i remove it in Makefile
+sed 's|CATALOGS = cs.mo da.mo de.mo el.mo es.mo eu.mo fi.mo fr.mo it.mo ja.mo pl.mo pt_BR.mo ru.mo zh_CN.mo|CATALOGS = cs.mo da.mo de.mo el.mo es.mo eu.mo fi.mo fr.mo it.mo pl.mo pt_BR.mo ru.mo zh_CN.mo|g' \
+    po/Makefile > po/_
+  mv -f po/_ po/Makefile
+
+make
+make DESTDIR="$1" install
