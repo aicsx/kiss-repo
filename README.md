@@ -1,4 +1,6 @@
-# ax - kiss repository
+# READ WARNIG.FIRST
+
+## ax - kiss repository
 This is a personal Kiss Linux repository
 
 - add repo in your /etc/profile.d/kiss_path.sh :
@@ -9,4 +11,4 @@ This is a personal Kiss Linux repository
 ~$ kiss i btrfs-progs
 ```
 
-# end
+## end
